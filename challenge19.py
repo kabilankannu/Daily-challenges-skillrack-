@@ -1,0 +1,21 @@
+n=int(input())
+a=int(input())
+b=int(input())
+dec=0
+i=0
+while(n>0):
+  r=n%10
+  dec+=r*(a**i)
+  n//=10
+  i+=1
+if b==10:
+  print(dec)
+else:
+  s=0
+  j=0
+  while(dec>0):
+    r=dec%b
+    s+=r*(10**j)
+    dec//=b
+    j+=1
+  print(s)
